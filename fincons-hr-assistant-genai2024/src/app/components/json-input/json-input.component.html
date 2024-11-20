@@ -1,5 +1,5 @@
-<div>
+<mat-card>
   <textarea [(ngModel)]="jsonInput" placeholder="Enter JSON here"></textarea>
-  <button (click)="renderGraph()">Render</button>
+  <button (click)="renderGraph()" color="primary">Render</button>
   <div *ngIf="jsonError" class="error">{{ jsonError }}</div>
-</div>
+</mat-card>
