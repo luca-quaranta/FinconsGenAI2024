@@ -1,0 +1,5 @@
+<div>
+  <textarea [(ngModel)]="jsonInput" placeholder="Enter JSON here"></textarea>
+  <button (click)="renderGraph()">Render</button>
+  <div *ngIf="jsonError" class="error">{{ jsonError }}</div>
+</div>

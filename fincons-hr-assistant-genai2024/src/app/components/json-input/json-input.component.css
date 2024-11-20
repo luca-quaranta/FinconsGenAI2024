@@ -1,0 +1,12 @@
+textarea {
+  width: 70%;
+  height: 400px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+}
