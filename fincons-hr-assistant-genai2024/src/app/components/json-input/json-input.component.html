@@ -1,5 +1,11 @@
 <mat-card>
-  <textarea [(ngModel)]="jsonInput" placeholder="Enter JSON here"></textarea>
-  <button (click)="renderGraph()" color="primary">Render</button>
-  <div *ngIf="jsonError" class="error">{{ jsonError }}</div>
+  <mat-card-header>CV conceptual map graph renderer</mat-card-header>
+  <mat-card-content class="mat-card ">
+    <textarea [(ngModel)]="jsonInput" placeholder="Enter JSON here"></textarea>
+    <div *ngIf="jsonError" class="error">{{ jsonError }}</div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="renderGraph()"
+      class="mat-focus-indicator mat-tooltip-trigger mat-raised-button mat-button-base">Render map</button>
+  </mat-card-actions>
 </mat-card>

@@ -5,6 +5,11 @@ import { AppComponent } from './app.component';
 import { JsonInputComponent } from './components/json-input/json-input.component';
 import { GraphRendererComponent } from './components/graph-renderer/graph-renderer.component';
 import { MatCardModule } from '@angular/material/card';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -14,10 +19,15 @@ import { MatCardModule } from '@angular/material/card';
   ],
   imports: [
     MatCardModule,
+    MatButtonModule,
+    MatGridListModule,
+    MatSidenavModule,
+    MatToolbarModule,
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
-  exports:[MatCardModule],
+  exports: [MatCardModule, MatButtonModule, MatGridListModule,MatSidenavModule,MatToolbarModule],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,2 +1,16 @@
-<app-json-input (dataChange)="updateGraphData($event)"></app-json-input>
-<app-graph-renderer [data]="jsonData"></app-graph-renderer>
+<mat-sidenav-container style="    display: block;width: 100vw;height: 100vh;">
+    <mat-sidenav></mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar class="mat-toolbar mat-primary mat-toolbar-multiple-rows" style="min-height: 64px;">
+            <mat-toolbar-row>
+                GEN AI - HR Assistant
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <div>
+            <app-json-input (dataChange)="updateGraphData($event)"></app-json-input>
+        </div>
+        <div>
+            <app-graph-renderer [data]="jsonData" style="width: 100%;"></app-graph-renderer>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

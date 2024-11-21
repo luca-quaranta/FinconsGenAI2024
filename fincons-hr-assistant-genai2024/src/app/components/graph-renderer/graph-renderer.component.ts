@@ -32,6 +32,8 @@ export class GraphRendererComponent implements OnChanges {
     }));
     this.links = this.data!.links.map(p => ({ source: this.findNodeIndex(p.from), target: this.findNodeIndex(p.to) }));
     const svg = d3.select(this.container.nativeElement);
+    this.svgHeight = this.container.nativeElement.height.baseVal.value;
+    this.svgWidth = this.container.nativeElement.width.baseVal.value;
 
     const simulation = d3.forceSimulation(this.nodes)
       .force('charge', d3.forceManyBody().strength(-1000))
@@ -56,9 +58,9 @@ export class GraphRendererComponent implements OnChanges {
       .enter()
       .append('text')
       .text(node => node.label)
-      .attr('stoke', 'black')
+      .attr('stroke', 'black')
       .attr('font-weight', 'bold')
-      .attr('text-anchor', 'middle');
+      .attr('text-anchor', 'top');
 
     simulation.on('tick', () => {
       circles
